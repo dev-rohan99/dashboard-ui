@@ -1,0 +1,47 @@
+@import "bootstrap/scss/bootstrap";
+
+
+// Default variable overrides
+$body-bg: #FCFCFC;
+$body-color: #252F4A;
+$color: #ffffff;
+$body-element: #FFFFFF;
+$sidebar: #0D0E12;
+$primary: #3E93F9;
+$secondary: rgb(55, 55, 55);
+$danger: #F8285A;
+$success: #17C653;
+$secondary-text: #A9A1BE;
+$gray: #9FA7BC;
+$gray-original: gray;
+
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger
+);
+
+$font-sizes: (
+  1: 5rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 2.5rem
+);
+
+// breakpoints
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin media-breakpoint-up($key) {
+  @media (max-width: map-get($breakpoints, $key)) {
+    @content;
+  }
+}
+

@@ -1,0 +1,490 @@
+@import "bootstrap/scss/bootstrap";
+@import './variables.scss';
+
+
+a{
+    text-decoration: none !important;
+}
+
+// dashboard header and sidebar design 
+
+.dashMenuItem{
+    color: $color !important;
+    font-weight: 500;
+    display: flex !important;
+    padding: 11px 7px;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.headerMenuItem{
+    color: $gray-original;
+    transition: all 0.2s ease-in-out;
+}
+
+.headerMenuItem:hover{
+    color: $primary;
+}
+
+.dashMenuItem.active{
+    background-color: $secondary;
+}
+
+.dashMenuItem:hover{
+    background-color: $secondary;
+}
+
+.dashMenuItem:active{
+    background-color: $primary;
+}
+
+.dashMenuIcon{
+    color: $primary;
+}
+
+.sidebarWrap{
+    height: 100vh;
+    background-color: $sidebar;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
+.sidebarWrap::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.sidebarWrap::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.sidebarWrap::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+}
+
+.listWrap{
+    list-style: none;
+}
+
+.profile{
+    width: 30px !important;
+    height: 30px !important;
+    object-fit: cover !important;
+}
+
+// dashboard main content design
+
+.subtitle{
+    color: $gray;
+    font-weight: normal;
+}
+
+.symbol{
+    color: $gray-original;
+    font-size: 18px;
+    margin-right: 7px;
+}
+
+.text-bg-success.res{
+    font-size: 13px !important;
+    color: green!important;
+    background-color: #DFFFEA !important;
+    margin-left: 7px;
+}
+
+.text-bg-success.orderBadge{
+    font-size: 11px !important;
+    color: green!important;
+    background-color: #DFFFEA !important;
+    margin-left: 7px;
+}
+
+.text-bg-danger.orderBadge{
+    font-size: 11px !important;
+    color: #F8285A!important;
+    background-color: #FFEEF3 !important;
+    margin-left: 7px;
+}
+
+.text-bg-primary.orderBadge{
+    font-size: 11px !important;
+    color: $primary !important;
+    background-color: #E9F3FF !important;
+    margin-left: 7px;
+}
+
+.text-bg-danger.resDanger{
+    font-size: 13px !important;
+    color: #F8285A !important;
+    background-color: #FFEEF3 !important;
+    margin-left: 7px;
+}
+
+.persentage{
+    color: $gray;
+}
+
+.contentWrapper{
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.dashCardIcon{
+    color: green !important;
+    margin-right: 4px;
+}
+
+.dashCardIconDan{
+    color: #F8285A !important;
+    margin-right: 4px;
+}
+
+.dashCard{
+    background-color: $body-bg;
+}
+
+.amount{
+    color: $gray-original;
+    font-weight: 500;
+}
+
+.progressBar{
+    width: 100%;
+    height: 9px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #DFFFEA;
+    transition: all 0.3s ease-in-out;
+}
+
+.progressBarFill{
+    width: 62%;
+    height: 9px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #17C653;
+}
+
+.herosProfile{
+    margin-left: -3px;
+}
+
+.sliderCat{
+    overflow-x:scroll;
+    overflow-y:hidden;
+    white-space:nowrap;
+    flex-wrap: nowrap !important;
+}
+
+.sliderCat::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+.sliderCat::-webkit-scrollbar
+{
+	height: 6px !important;
+	background-color: #F5F5F5;
+}
+
+.sliderCat::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background-color: #ddd;
+}
+
+.tableScroll::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+.tableScroll::-webkit-scrollbar
+{
+	height: 6px !important;
+	background-color: #F5F5F5;
+}
+
+.tableScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background-color: #ddd;
+}
+
+
+.tableScrollTwo{
+    overflow: scroll;
+    flex-wrap: nowrap !important;
+    height: 400px;
+}
+
+.tableScrollTwo::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+th, td{
+    font-size: 14px;
+}
+
+.tableScrollTwo::-webkit-scrollbar
+{
+	width: 6px !important;
+	height: 6px !important;
+	background-color: #F5F5F5;
+}
+
+.tableScrollTwo::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background-color: #ddd;
+}
+
+.tableItemWid {
+    width: 800px !important;
+    overflow: auto;
+}
+
+.orderCardScroll{
+    height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 15px;
+    margin-right: -10px;
+}
+
+.orderCardScroll::-webkit-scrollbar-track
+{
+	background-color: transparent;
+	border-radius: 10px;
+}
+
+.orderCardScroll::-webkit-scrollbar
+{
+	width: 6px !important;
+	background-color: #F5F5F5;
+}
+
+.orderCardScroll::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+    background-color: #ddd;
+}
+
+.sliderCat {
+    scrollbar-width: thin;
+}
+
+.catItem{
+    position: relative;
+    flex-direction: column !important; 
+    text-align: center;
+}
+
+.secondItem{
+    border: 2px solid #eaeaea;
+}
+
+.catItem.active::after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $primary;
+}
+
+.linkButSimpleText{
+    color: $body-color;
+}
+
+.simpleBorder{
+    border-top: 2px solid $gray-original;
+}
+
+.col-md-2.sidebarWrap{
+    transition: all 0.3s ease-in-out;
+}
+
+.col-md-2.sidebarEffect{
+    width: 60px !important;
+}
+
+.col-md-2.sidebarWrap{
+    transition: all 0.3s ease-in-out;
+}
+
+.forMin{
+    display: block;
+}
+
+.forDefault{
+    display: block;
+}
+.forMinOne{
+    display: none;
+}
+.sidebarMenuText{
+    display: none;
+}
+
+.barOpenAndCloseBtn{
+    background-color: #fff;
+    color: $primary;
+    right: -15px;
+    top: 25px;
+    transition: all 0.3s ease-in-out;
+}
+
+.barOpenAndCloseBtn .trans{
+    transition: all 0.3s ease-in-out;
+}
+
+.iconRotate{
+    transform: rotate(180deg);
+}
+
+
+.dashMenuItem span{
+    margin-left: 7px !important;
+}
+
+// .sidebarEffect:hover{
+//     width: 16.66666667%;
+// }
+
+// .sidebarEffect:hover img.forDefault{
+//     display: block;
+// }
+
+// .sidebarEffect:hover img.forMin{
+//     display: none;
+// }
+
+// .sidebarEffect:hover .sidebarMenuText{
+//     display: block;
+// }
+
+
+// table
+
+span {
+    color: $gray;
+    font-size: 14px;
+}
+
+// responsive design
+
+@include media-breakpoint-up(sm) {
+
+    .sidebarWrap{
+        width: 60px !important;
+    }
+
+    .forDefault{
+        display: none;
+    }
+
+    .forMinOne{
+        display: block;
+    }
+
+    .dashMenuItem span{
+        display: none;
+    }
+    
+    .d-flex.justify-content-start.align-items-center.dashMenuItem.rounded.w-100{
+        justify-content: center !important;
+    }
+
+    .col.contentWrapper {
+        width: 89% !important;
+    }
+
+    
+    .sidebarWrapTwo{
+        height: 100vh;
+        width: 10% !important;
+    }
+    .lastProductOrderTableWrap{
+        flex-direction: column !important;
+    }
+    .lastProductOrderTableWrap .firstBlockofLastProductOrderTableWrap{
+        width: 100% !important;
+    }
+
+}
+
+@include media-breakpoint-up(md) {
+
+    .sidebarWrap{
+        width: 60px !important;
+    }
+
+    .forDefault{
+        display: none;
+    }
+
+    .forMinOne{
+        display: block;
+    }
+    .dashMenuItem span{
+        display: none;
+    }
+
+    .dashMenuItem{
+        justify-content: center;
+    }
+    .d-flex.justify-content-start.align-items-center.dashMenuItem.rounded.w-100{
+        justify-content: center !important;
+    }
+
+    .contentWrapper {
+        width: 89% !important;
+    }
+
+    
+    .sidebarWrapTwo{
+        height: 100vh;
+        width: 10% !important;
+    }
+    .lastProductOrderTableWrap{
+        flex-direction: column !important;
+    }
+    .lastProductOrderTableWrap .firstBlockofLastProductOrderTableWrap{
+        width: 100% !important;
+    }
+    
+}
+
+@include media-breakpoint-up(lg) {
+
+
+
+}
+
+@include media-breakpoint-up(xl) {
+
+
+
+}
+
+@include media-breakpoint-up(xxl) { 
+
+    
+    
+}
+
+
