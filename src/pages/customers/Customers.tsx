@@ -1,11 +1,14 @@
-import React from 'react';
+import DataTable from 'datatables.net-dt';
+import React, { useEffect } from 'react';
 import { FaEye, FaTrashAlt, FaUserEdit } from 'react-icons/fa';
 import { FaArrowTrendUp } from 'react-icons/fa6';
 
 
 const Customers: React.FC = () => {
 
-
+    useEffect(() => {
+        new DataTable('.tableItemWid');
+    }, []);
 
     return (
         <>
@@ -45,7 +48,7 @@ const Customers: React.FC = () => {
                         <div className="mt-5">
                             <div className="pb-2">
                                 <div className="table-responsive tableScrollTwo p-3 bg-white">
-                                    <table className="table mb-0 tableItemWid w-100">
+                                    <table className="table mb-0 tableItemWid mb-3 mt-4">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Name</th>

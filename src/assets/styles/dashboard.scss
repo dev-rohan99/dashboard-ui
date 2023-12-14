@@ -252,7 +252,7 @@ th, td{
 }
 
 .tableItemWid {
-    width: 800px !important;
+    width: 970px !important;
     overflow: auto;
 }
 
@@ -384,6 +384,112 @@ span {
     color: $gray;
     font-size: 14px;
 }
+
+div#DataTables_Table_0_info {
+    float: left;
+    color: $gray;
+    padding-bottom: 13px;
+}
+
+div#DataTables_Table_0_paginate {
+    float: right;
+    padding-bottom: 13px;
+}
+
+div#DataTables_Table_0_length {
+    float: left;
+    color: $gray;
+}
+
+div#DataTables_Table_0_filter {
+    label input{
+        appearance: none;
+        outline: 0;
+        font: inherit;
+        width: 10rem;
+        padding: 3px 10px;
+        border: 2px solid #ddd;
+        color: $gray;
+        border-radius: 0.75em;
+        margin-left: 10px;
+    }
+}
+
+div#DataTables_Table_0_length {
+    select {
+        /* Reset */
+        appearance: none;
+        outline: 0;
+        font: inherit;
+        /* Personalize */
+        width: 5rem;
+        padding: 3px 10px;
+        border: 2px solid #ddd;
+        color: $gray;
+        border-radius: 0.75em;
+        cursor: pointer;
+        /* Remove IE arrow */
+        &::-ms-expand {
+          display: none;
+        }
+        /* Remove focus outline */
+        &:focus {
+          outline: none;
+        }
+        /* <option> colors */
+        // option {
+        //   color: inherit;
+        //   background-color: var(--option-bg);
+        // }
+      }
+}
+
+div#DataTables_Table_0_filter {
+    float: right;
+    color: $gray;
+}
+
+a#DataTables_Table_0_previous{
+    padding: 5px 15px;
+    border-radius: 9px;
+    background-color: #ddd;
+    color: $body-color;
+    margin-right: 7px;
+}
+
+a#DataTables_Table_0_next{
+    padding: 5px 15px;
+    border-radius: 9px;
+    background-color: #ddd;
+    color: $body-color;
+}
+
+div#DataTables_Table_0_paginate span .paginate_button{
+    padding: 5px 15px;
+    border-radius: 9px;
+    background-color: #ddd;
+    color: $body-color;
+    margin-right: 7px;
+}
+
+// product page
+
+.productWrapper{
+    width: 300px;
+}
+
+.productImage{
+    width: 70px;
+    height: 70px;
+    border-radius: 7px;
+}
+
+.productText{
+    margin-left: 10px;
+    font-size: 15px;
+    color: $body-color;
+}
+
 
 // responsive design
 

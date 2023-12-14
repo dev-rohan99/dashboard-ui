@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaEye, FaTrashAlt, FaUserEdit } from 'react-icons/fa';
 import { FaArrowTrendUp } from 'react-icons/fa6';
+import DataTable from 'datatables.net-dt';
 
 
 const Suppliers: React.FC = () => {
 
-
+    useEffect(() => {
+        new DataTable('.tableItemWid');
+    }, []);
 
     return (
         <>
@@ -44,15 +47,15 @@ const Suppliers: React.FC = () => {
                         <div className="mt-5">
                             <div className="pb-2">
                                 <div className="table-responsive tableScrollTwo p-3 bg-white">
-                                    <table className="table mb-0 tableItemWid w-100">
+                                    <table className="table mb-0 tableItemWid mb-3 mt-4">
                                         <thead>
                                             <tr>
                                                 <th scope="col">Name</th>
                                                 <th scope="col">USER ID</th>
                                                 <th scope="col">DATE ADDED</th>
-                                                <th scope="col">ORDER AMOUNT</th>
+                                                <th scope="col">TOTAL AMOUNT DELIVERY</th>
                                                 <th scope="col">STATUS</th>
-                                                <th scope="col">Orders</th>
+                                                <th scope="col">TOTAL DELIVERY QTY</th>
                                                 <th scope="col">Actions</th>
                                             </tr>
                                         </thead>
@@ -79,7 +82,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -95,7 +98,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -111,7 +114,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -127,7 +130,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -143,7 +146,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -159,7 +162,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -175,7 +178,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
@@ -191,55 +194,7 @@ const Suppliers: React.FC = () => {
                                                 <td>PXFDFG-778FRGG</td>
                                                 <td>16 Jan, 2023</td>
                                                 <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
-                                                <td>78 PCS</td>
-                                                <td className="d-flex justify-content-start gap-1">
-                                                    <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-secondary btn-sm d-flex p-1 justify-content-center align-items-center"><FaUserEdit style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-danger btn-sm d-flex p-1 justify-content-center align-items-center"><FaTrashAlt style={{fontSize:"15px"}}/></button>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>Rohima Begum</th>
-                                                <td>PXFDFG-778FRGG</td>
-                                                <td>16 Jan, 2023</td>
-                                                <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
-                                                <td>78 PCS</td>
-                                                <td className="d-flex justify-content-start gap-1">
-                                                    <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-secondary btn-sm d-flex p-1 justify-content-center align-items-center"><FaUserEdit style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-danger btn-sm d-flex p-1 justify-content-center align-items-center"><FaTrashAlt style={{fontSize:"15px"}}/></button>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>Rohima Begum</th>
-                                                <td>PXFDFG-778FRGG</td>
-                                                <td>16 Jan, 2023</td>
-                                                <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
-                                                <td>78 PCS</td>
-                                                <td className="d-flex justify-content-start gap-1">
-                                                    <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-secondary btn-sm d-flex p-1 justify-content-center align-items-center"><FaUserEdit style={{fontSize:"15px"}}/></button>
-
-                                                    <button className="btn btn-danger btn-sm d-flex p-1 justify-content-center align-items-center"><FaTrashAlt style={{fontSize:"15px"}}/></button>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>Rohima Begum</th>
-                                                <td>PXFDFG-778FRGG</td>
-                                                <td>16 Jan, 2023</td>
-                                                <td>$20000</td>
-                                                <td><span className="badge text-bg-success orderBadge">Customer</span></td>
+                                                <td><span className="badge text-bg-success orderBadge">Supplier</span></td>
                                                 <td>78 PCS</td>
                                                 <td className="d-flex justify-content-start gap-1">
                                                     <button className="btn btn-info btn-sm d-flex text-white p-1 justify-content-center align-items-center"><FaEye style={{fontSize:"15px"}}/></button>

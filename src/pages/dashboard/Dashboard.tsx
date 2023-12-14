@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaArrowTrendUp } from "react-icons/fa6";
 import DoughnutChart from '../../components/doughnut-chart/DoughnutChart';
 import { PiDotsThreeDuotone } from "react-icons/pi";
@@ -7,12 +7,15 @@ import DiscountSales from '../../components/discount-sales/DiscountSales';
 import MonthlySales from '../../components/monthly-sales/MonthlySales';
 import MonthlyOrders from '../../components/monthly-orders/MonthlyOrders';
 import MonthlyCustomers from '../../components/monthly-customers/MonthlyCustomers';
+import DataTable from 'datatables.net-dt';
 
 
 
 const Dashboard: React.FC = () => {
 
-
+    useEffect(() => {
+        new DataTable('.tableItemWid');
+    }, []);
     
 
     return (
@@ -254,7 +257,7 @@ const Dashboard: React.FC = () => {
                         <div className="mt-5">
                             <div className="pb-2">
                                 <div className="table-responsive tableScrollTwo p-3 bg-white">
-                                    <table className="table mb-0 tableItemWid">
+                                    <table className="table mb-0 tableItemWid mb-3 mt-4">
                                         <thead>
                                             <tr>
                                                 <th scope="col">ITEM</th>
@@ -266,6 +269,51 @@ const Dashboard: React.FC = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                            <tr>
+                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>
+                                                <td>#PXF-778</td>
+                                                <td>16 Jan, 2023</td>
+                                                <td>$4500</td>
+                                                <td><span className="badge text-bg-primary orderBadge">In stock</span></td>
+                                                <td>78 PCS</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>
+                                                <td>#PXF-778</td>
+                                                <td>16 Jan, 2023</td>
+                                                <td>$4500</td>
+                                                <td><span className="badge text-bg-primary orderBadge">In stock</span></td>
+                                                <td>78 PCS</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>
+                                                <td>#PXF-778</td>
+                                                <td>16 Jan, 2023</td>
+                                                <td>$4500</td>
+                                                <td><span className="badge text-bg-primary orderBadge">In stock</span></td>
+                                                <td>78 PCS</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>
+                                                <td>#PXF-778</td>
+                                                <td>16 Jan, 2023</td>
+                                                <td>$4500</td>
+                                                <td><span className="badge text-bg-primary orderBadge">In stock</span></td>
+                                                <td>78 PCS</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>
+                                                <td>#PXF-778</td>
+                                                <td>16 Jan, 2023</td>
+                                                <td>$4500</td>
+                                                <td><span className="badge text-bg-primary orderBadge">In stock</span></td>
+                                                <td>78 PCS</td>
+                                            </tr>
 
                                             <tr>
                                                 <th scope="row" style={{color: "#1B84FF",fontWeight:"normal"}}>HP Hyper LTR</th>

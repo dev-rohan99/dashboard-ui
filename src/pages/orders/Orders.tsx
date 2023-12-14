@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import MonthlyOrders from '../../components/monthly-orders/MonthlyOrders';
 import MonthlyCustomers from '../../components/monthly-customers/MonthlyCustomers';
 import { FaArrowTrendUp } from 'react-icons/fa6';
+import DataTable from 'datatables.net-dt';
 
 
 const Orders: React.FC = () => {
 
-
+    useEffect(() => {
+        new DataTable('.tableItemWid');
+    }, []);
 
     return (
         <>
         
         
             <div className="container-fluid mt-3">
+
+                <div className="row mb-5">
+                    <div className="col-md-5 d-flex align-items-center justify-content-start">
+                        <h6 className="subtitle">Home - Orders</h6>
+                    </div>
+
+                    <div className="col-md-7 p-0 d-flex align-items-center justify-content-end gap-2">
+                        <button className="btn btn-secondary btn-sm">Manage Orders</button>
+                    </div>
+                </div>
                 
                 <div className="row gap-5 mt-5 mb-5">
                     <MonthlyOrders/>
@@ -42,7 +55,7 @@ const Orders: React.FC = () => {
                         <div className="mt-5">
                             <div className="pb-2">
                                 <div className="table-responsive tableScrollTwo p-3 bg-white">
-                                    <table className="table mb-0 tableItemWid w-100">
+                                    <table className="table mb-0 tableItemWid mb-3 mt-4">
                                         <thead>
                                             <tr>
                                                 <th scope="col">ITEM</th>
