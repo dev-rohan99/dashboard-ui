@@ -2,9 +2,13 @@ import DataTable from 'datatables.net-dt';
 import React, { useEffect } from 'react';
 import { FaEye, FaTrashAlt, FaUserEdit } from 'react-icons/fa';
 import { FaArrowTrendUp } from 'react-icons/fa6';
+import Modal from '../../components/modal/Modal';
+import useDropdownAndModalControl from '../../hooks/useDropdownAndModalControl';
 
 
 const Customers: React.FC = () => {
+
+    const { isOpen, toggle, dropdownRef, setIsOpen } = useDropdownAndModalControl();
 
     useEffect(() => {
         new DataTable('.tableItemWid');
@@ -21,9 +25,30 @@ const Customers: React.FC = () => {
                         <h6 className="subtitle">Home - Customers</h6>
                     </div>
 
-                    <div className="col-md-7 p-0 d-flex align-items-center justify-content-end gap-2">
+                    <div ref={dropdownRef} className="col-md-7 p-0 d-flex align-items-center justify-content-end gap-2">
                         <button className="btn btn-secondary btn-sm">Manage Customers</button>
-                        <button className="btn btn-primary btn-sm">Add Customer</button>
+                        <button onClick={toggle} className="btn btn-primary btn-sm">Add Customer</button>
+
+                        {isOpen && <Modal title="Create Customer" setIsOpen={setIsOpen}>
+                            <form>
+                                <div className="form-floating">
+                                    <input type="text" className="form-control mb-3" placeholder="Product Name" />
+                                    <label className="d-flex align-items-center" htmlFor="floatingTextarea">Name</label>
+                                </div>
+
+                                <div className="form-floating">
+                                    <input type="email" className="form-control mb-3" placeholder="Email Address" />
+                                    <label className="d-flex align-items-center" htmlFor="floatingTextarea">Email Address</label>
+                                </div>
+
+                                <div className="form-floating">
+                                    <input type="password" className="form-control mb-3" placeholder="Password" />
+                                    <label className="d-flex align-items-center" htmlFor="floatingTextarea">Password</label>
+                                </div>
+
+                                <button className="btn btn-primary w-100">Create Customer</button>
+                            </form>
+                        </Modal>}
                     </div>
                 </div>   
                 

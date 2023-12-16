@@ -8,10 +8,14 @@ import MonthlySales from '../../components/monthly-sales/MonthlySales';
 import MonthlyOrders from '../../components/monthly-orders/MonthlyOrders';
 import MonthlyCustomers from '../../components/monthly-customers/MonthlyCustomers';
 import DataTable from 'datatables.net-dt';
+import useDropdownAndModalControl from '../../hooks/useDropdownAndModalControl';
+import Modal from '../../components/modal/Modal';
 
 
 
 const Dashboard: React.FC = () => {
+
+    const { isOpen, toggle, dropdownRef, setIsOpen } = useDropdownAndModalControl();
 
     useEffect(() => {
         new DataTable('.tableItemWid');
@@ -29,9 +33,63 @@ const Dashboard: React.FC = () => {
                         <h6 className="subtitle">Home - Dashboard</h6>
                     </div>
 
-                    <div className="col-md-7 p-0 d-flex align-items-center justify-content-end gap-2">
+                    <div ref={dropdownRef} className="col-md-7 p-0 d-flex align-items-center justify-content-end gap-2">
                         <button className="btn btn-secondary btn-sm">Manage Seals</button>
-                        <button className="btn btn-primary btn-sm">Create Product</button>
+                        <button onClick={toggle} className="btn btn-primary btn-sm">Create Product</button>
+
+                        {isOpen && <Modal title="Create Product" setIsOpen={setIsOpen}>
+                            <form>
+                                <div className="form-floating">
+                                    <input type="text" className="form-control mb-3" placeholder="Product Name" />
+                                    <label className="d-flex align-items-center" htmlFor="floatingTextarea">Product Name</label>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col">
+                                        <div className="form-floating">
+                                            <input type="text" className="form-control mb-3" placeholder="Product Price" />
+                                            <label className="d-flex align-items-center" htmlFor="floatingTextarea">Product Price</label>
+                                        </div>
+                                    </div>
+                                    <div className="col">
+                                        <input type="file" className="form-control " placeholder="Product Photos" style={{padding:"1rem 1rem"}} />
+                                    </div>
+                                </div>
+
+                                <div className="row">
+                                    <div className="col">
+                                        <select className="form-control mb-3" style={{padding:"1rem 1rem"}}>
+                                            <option value="" selected>Select Category</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+
+
+                                    <div className="col">
+                                        <select className="form-control mb-3" style={{padding:"1rem 1rem"}}>
+                                            <option value="" selected>Select Product Type</option>
+                                            <option value="1">One</option>
+                                            <option value="2">Two</option>
+                                            <option value="3">Three</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div className="form-floating">
+                                    <textarea className="form-control mb-3 pt-4" placeholder="Short Description" id="floatingTextarea2" style={{height: "100px"}} />
+                                    <label className="d-flex" htmlFor="floatingTextarea2">Short Description</label>
+                                </div>
+
+                                <div className="form-floating">
+                                    <textarea className="form-control mb-3 pt-4" placeholder="Short Description" id="floatingTextarea2" style={{height: "100px"}} />
+                                    <label className="d-flex" htmlFor="floatingTextarea2">Long Description</label>
+                                </div>
+
+                                <button className="btn btn-primary w-100">Create Product</button>
+                            </form>
+                        </Modal>}
                     </div>
                 </div>
                 
