@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { MdOutlineDashboard, MdOutlineEdgesensorHigh, MdOutlineSell } from 'react-icons/md';
+import { MdOutlineDashboard, MdOutlineEdgesensorHigh, MdOutlineForwardToInbox, MdOutlineSell } from 'react-icons/md';
 import { BsTruckFrontFill } from "react-icons/bs";
 import "../../assets/styles/dashboard.scss";
 import { FaLongArrowAltRight, FaSitemap, FaUsers } from 'react-icons/fa';
@@ -41,7 +41,7 @@ const DashboardLayout: React.FC = () => {
                       <Link className={`d-flex ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/" ? "active" : ""}`} to={"/"}><MdOutlineDashboard className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Dashboard</span></Link>
                   </li>
                   <li className="mb-2"> 
-                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/analytic" ? "active" : ""}`} to={"/analytic"}><MdOutlineEdgesensorHigh className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Analytic</span></Link>
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/analytic" ? "active" : ""}`} to={"/inbox"}><MdOutlineForwardToInbox className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Inbox</span></Link>
                   </li>
 
                   <div className=""><hr className="w-100 simpleBorder" /></div>

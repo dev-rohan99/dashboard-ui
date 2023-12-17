@@ -583,6 +583,104 @@ label.d-flex::after {
     border-top: 2px solid #ddd;
 }
 
+// inbox page
+
+.galary{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $primary;
+    margin-right: 15px;
+    margin-left: 8px;
+}
+
+.messageSend{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $danger;
+    margin-right: 8px;
+    margin-left: 15px;
+}
+
+.inboxSidebarWrap{
+    height: 80vh;
+    background-color: $primary-light;
+}
+
+.inboxPeople{
+    transition: all 0.3s ease-in-out;
+    color: $body-color !important;
+}
+
+.textMessageOpponent{
+    background-color: $primary-light;
+    font-size: 13px;
+    width: 600px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: $body-color;
+}
+
+.textMessageMe{
+    background-color: $primary;
+    font-size: 13px;
+    width: 600px;
+    font-weight: 500;
+    margin-right: 10px;
+    color: $color;
+}
+
+.messageSendBox{
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.inboxPeople:hover{
+    background-color: $primary;
+    color: #fff !important;
+}
+
+.inboxPeople:hover span{
+    color: #fff !important;
+    transition: all 0.3s ease-in-out;
+}
+
+.inboxPeople.active{
+    background-color: $primary;
+    color: #fff !important;
+}
+
+.inboxPeople.active span{
+    color: #fff !important;
+}
+
+
+
+.inboxSidebarWrap::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.inboxSidebarWrap::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.inboxSidebarWrap::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+}
+
 
 // responsive design
 

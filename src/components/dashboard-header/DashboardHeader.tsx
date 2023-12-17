@@ -4,7 +4,7 @@ import { HiViewGridAdd } from "react-icons/hi";
 import { MdCircleNotifications, MdMessage } from 'react-icons/md';
 import { FaSearch } from 'react-icons/fa';
 import useDropdownAndModalControl from '../../hooks/useDropdownAndModalControl';
-import { left } from '@popperjs/core';
+import { Link } from 'react-router-dom';
 
 
 const DashboardHeader: React.FC = () => {
@@ -66,9 +66,9 @@ const DashboardHeader: React.FC = () => {
 
             {isOpen && <div className="dropdownPropile rounded p-3 shadow">
               <div className="d-flex justify-content-start align-items-center mb-3">
-                <a onClick={toggle} href="/" className="">
+                <Link to="/profile" className="">
                   <img className="profileTwo rounded" src="https://preview.keenthemes.com/metronic8/demo1/assets/media/avatars/300-3.jpg" alt="" />
-                </a>
+                </Link>
                 <div style={{marginLeft:"9px"}} className="">
                   <h6 className="m-0">Rohan Mostofa</h6>
                   <span>example@gmail.com</span>
@@ -76,13 +76,13 @@ const DashboardHeader: React.FC = () => {
               </div>
 
               <ul className="p-0 m-0 list-unstyled">
-                <li className="pt-2 mt-2 profileListBorder"><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">My Profile</a></li>
-                <li><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">My Projects</a></li>
-                <li><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">My Subscription</a></li>
-                <li><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">My Statements</a></li>
+                <li className="pt-2 mt-2 profileListBorder"><Link to="/profile" className="profileListMenu rounded p-2 px-3 mb-1">My Profile</Link></li>
+                <li><Link to="/coming-soon" className="profileListMenu rounded p-2 px-3 mb-1">My Blogs</Link></li>
+                <li><Link to="/coming-soon" className="profileListMenu rounded p-2 px-3 mb-1">My Subscription</Link></li>
+                <li><Link to="/coming-soon" className="profileListMenu rounded p-2 px-3 mb-1">My Statements</Link></li>
 
                 <li className="pt-2 mt-2 profileListBorder"><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">Language</a></li>
-                <li><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">Account Settings</a></li>
+                <li><Link to="/coming-soon" className="profileListMenu rounded p-2 px-3 mb-1">Account Settings</Link></li>
                 <li><a href="/" className="profileListMenu rounded p-2 px-3 mb-1">Sign Out</a></li>
               </ul>
             </div>}

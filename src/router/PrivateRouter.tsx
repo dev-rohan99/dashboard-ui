@@ -2,13 +2,14 @@ import React from 'react';
 import DashboardLayout from '../components/dashboard-layout/DashboardLayout';
 import PrivateGard from './PrivateGard';
 import Dashboard from '../pages/dashboard/Dashboard';
-import Analytic from '../pages/analytic/Analytic';
+import Inbox from '../pages/inbox/Inbox';
 import Suppliers from '../pages/suppliers/Suppliers';
 import Orders from '../pages/orders/Orders';
 import Invoices from '../pages/invoices/Invoices';
 import Customers from '../pages/customers/Customers';
 import Products from '../pages/products/Products';
 import Sales from '../pages/sales/Sales';
+import Profile from '../pages/profile/Profile';
 
 interface Route {
     path?: string;
@@ -34,8 +35,8 @@ const PrivateRouter: NestedRouteTwo[] = [
                     element: <Dashboard />
                 },
                 {
-                    path: "/analytic",
-                    element: <Analytic />
+                    path: "/inbox",
+                    element: <Inbox />
                 },
                 {
                     path: "/suppliers",
@@ -60,6 +61,10 @@ const PrivateRouter: NestedRouteTwo[] = [
                 {
                     path: "/sales",
                     element: <Sales />
+                },
+                {
+                    path: "/profile",
+                    element: <Profile />
                 },
             ]
         }]
