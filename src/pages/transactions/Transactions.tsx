@@ -30,12 +30,12 @@ const Transactions: React.FC = () => {
                                     <table className="table mb-0 tableItemWid mb-3 mt-4">
                                         <thead>
                                             <tr>
-                                                <th scope="col">Customer</th>
+                                                <th scope="col">CUSTOMER</th>
                                                 <th scope="col">PRODUCT</th>
                                                 <th scope="col">DATE ADDED</th>
                                                 <th scope="col">PRICE</th>
                                                 <th scope="col">STATUS</th>
-                                                <th scope="col">QTY</th>
+                                                <th scope="col">ACTION</th>
                                             </tr>
                                         </thead>
                                         <tbody>
