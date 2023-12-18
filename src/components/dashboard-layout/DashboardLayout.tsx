@@ -3,9 +3,10 @@ import { Link, Outlet, useLocation } from 'react-router-dom';
 import { MdOutlineDashboard, MdOutlineEdgesensorHigh, MdOutlineForwardToInbox, MdOutlineSell } from 'react-icons/md';
 import { BsTruckFrontFill } from "react-icons/bs";
 import "../../assets/styles/dashboard.scss";
-import { FaLongArrowAltRight, FaSitemap, FaUsers } from 'react-icons/fa';
+import { FaLongArrowAltRight, FaRegStar, FaSitemap, FaUsers } from 'react-icons/fa';
 import DashboardHeader from '../dashboard-header/DashboardHeader';
-import { TbFileInvoice } from "react-icons/tb";
+import { TbFileInvoice } from "react-icons/tb";import { AiTwotoneShop } from "react-icons/ai";
+
 
 
 const DashboardLayout: React.FC = () => {
@@ -41,19 +42,25 @@ const DashboardLayout: React.FC = () => {
                       <Link className={`d-flex ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/" ? "active" : ""}`} to={"/"}><MdOutlineDashboard className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Dashboard</span></Link>
                   </li>
                   <li className="mb-2"> 
-                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/analytic" ? "active" : ""}`} to={"/inbox"}><MdOutlineForwardToInbox className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Inbox</span></Link>
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/inbox" ? "active" : ""}`} to={"/inbox"}><MdOutlineForwardToInbox className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Inbox</span></Link>
                   </li>
 
                   <div className=""><hr className="w-100 simpleBorder" /></div>
 
                   <li className="d-flex justify-content-start align-items-center mb-2"> 
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/brands" ? "active" : ""}`} to={"/brands"}><AiTwotoneShop className="dashMenuIcon" style={{fontSize: "22px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Brands</span></Link>
+                  </li>
+                  <li className="d-flex justify-content-start align-items-center mb-2"> 
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/products" ? "active" : ""}`} to={"/products"}><FaSitemap className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Products</span></Link>
+                  </li>
+                  <li className="d-flex justify-content-start align-items-center mb-2"> 
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/reviews" ? "active" : ""}`} to={"/reviews"}><FaRegStar className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Reviews</span></Link>
+                  </li>
+                  <li className="d-flex justify-content-start align-items-center mb-2"> 
                       <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/suppliers" ? "active" : ""}`} to={"/suppliers"}><BsTruckFrontFill className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Suppliers</span></Link>
                   </li>
                   <li className="d-flex justify-content-start align-items-center mb-2"> 
                       <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/orders" ? "active" : ""}`} to={"/orders"}><MdOutlineEdgesensorHigh className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Orders</span></Link>
-                  </li>
-                  <li className="d-flex justify-content-start align-items-center mb-2"> 
-                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/products" ? "active" : ""}`} to={"/products"}><FaSitemap className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Products</span></Link>
                   </li>
                   <li className="d-flex justify-content-start align-items-center mb-2"> 
                       <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/customers" ? "active" : ""}`} to={"/customers"}><FaUsers className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Customers</span></Link>
@@ -62,7 +69,7 @@ const DashboardLayout: React.FC = () => {
                   <div className=""><hr className="w-100 simpleBorder" /></div>
 
                   <li className="d-flex justify-content-start align-items-center mb-2"> 
-                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/invoices" ? "active" : ""}`} to={"/invoices"}><TbFileInvoice className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Invoices</span></Link>
+                      <Link className={`d-flex  ${isOpenSidebar ? "justify-content-start" : "justify-content-center"} align-items-center dashMenuItem rounded w-100 ${location.pathname === "/transactions" ? "active" : ""}`} to={"/transactions"}><TbFileInvoice className="dashMenuIcon" style={{fontSize: "20px"}} /> <span className={`${isOpenSidebar ? "" : "sidebarMenuText"}`}>Transactions</span></Link>
                   </li>
 
                   <li className="d-flex justify-content-start align-items-center mb-2"> 

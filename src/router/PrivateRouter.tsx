@@ -5,11 +5,14 @@ import Dashboard from '../pages/dashboard/Dashboard';
 import Inbox from '../pages/inbox/Inbox';
 import Suppliers from '../pages/suppliers/Suppliers';
 import Orders from '../pages/orders/Orders';
-import Invoices from '../pages/invoices/Invoices';
 import Customers from '../pages/customers/Customers';
 import Products from '../pages/products/Products';
 import Sales from '../pages/sales/Sales';
 import Profile from '../pages/profile/Profile';
+import Brands from '../pages/brands/Brands';
+import Reviews from '../pages/reviews/Reviews';
+import Invoice from '../pages/invoice/Invoice';
+import Transactions from '../pages/transactions/Transactions';
 
 interface Route {
     path?: string;
@@ -39,6 +42,14 @@ const PrivateRouter: NestedRouteTwo[] = [
                     element: <Inbox />
                 },
                 {
+                    path: "/brands",
+                    element: <Brands />
+                },
+                {
+                    path: "/reviews",
+                    element: <Reviews />
+                },
+                {
                     path: "/suppliers",
                     element: <Suppliers />
                 },
@@ -55,8 +66,12 @@ const PrivateRouter: NestedRouteTwo[] = [
                     element: <Customers />
                 },
                 {
-                    path: "/invoices",
-                    element: <Invoices />
+                    path: "/transactions",
+                    element: <Transactions />
+                },
+                {
+                    path: "/invoice/:id",
+                    element: <Invoice />
                 },
                 {
                     path: "/sales",

@@ -6,6 +6,124 @@ a{
     text-decoration: none !important;
 }
 
+
+// invoice design
+
+
+.inVoiceWrap span[contentEditable] { display: inline-block; }
+
+/* heading */
+
+.inVoiceWrap h1 { font: bold 100% sans-serif; letter-spacing: 0.5em; text-align: center; text-transform: uppercase; }
+
+/* table */
+
+.inVoiceWrap table { font-size: 75%; table-layout: fixed; width: 100%; }
+.inVoiceWrap table { border-collapse: separate; border-spacing: 2px; }
+.inVoiceWrap th, .inVoiceWrap td { border-width: 1px; padding: 0.5em; position: relative; text-align: left; }
+.inVoiceWrap th, .inVoiceWrap td { border-radius: 0.25em; border-style: solid; }
+.inVoiceWrap th { background: #EEE; border-color: #BBB; }
+.inVoiceWrap td { border-color: #DDD; }
+
+/* page */
+
+// html { font: 16px/1 'Open Sans', sans-serif; overflow: auto; padding: 0.5in; }
+// html { background: #999; cursor: default; }
+
+// body { box-sizing: border-box; height: 11in; margin: 0 auto; overflow: hidden; padding: 0.5in; width: 8.5in; }
+// body { background: #FFF; border-radius: 1px; box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5); }
+
+/* header */
+
+.inVoiceWrap span { color: $gray-original; }
+.inVoiceWrap header { margin: 0 0 3em; }
+.inVoiceWrap header:after { clear: both; content: ""; display: table; }
+
+.inVoiceWrap header h1 { background: $primary !important; border-radius: 0.25em; color: #FFF; margin: 0 0 1em; padding: 7px 0; }
+.inVoiceWrap header address { float: left; font-size: 75%; font-style: normal; line-height: 1.25; margin: 0 1em 1em 0; }
+.inVoiceWrap header address p { margin: 0 0 0.25em; }
+.inVoiceWrap header span, .inVoiceWrap header img { display: block; float: right; }
+.inVoiceWrap header span { margin: 0 0 1em 1em; max-height: 25%; max-width: 60%; position: relative; }
+.inVoiceWrap header img { max-height: 100%; max-width: 100%; }
+.inVoiceWrap header input { cursor: pointer; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; height: 100%; left: 0; opacity: 0; position: absolute; top: 0; width: 100%; }
+
+/* article */
+
+.inVoiceWrap article, .inVoiceWrap article address, .inVoiceWrap table.meta, .inVoiceWrap table.inventory { margin: 0 0 3em; }
+.inVoiceWrap article:after { clear: both; content: ""; display: table; }
+.inVoiceWrap article h1 { clip: rect(0 0 0 0); position: absolute; }
+
+.inVoiceWrap article address { float: left; font-size: 125%; font-weight: bold; }
+
+.inVoiceWrap table.meta, .inVoiceWrap table.balance { float: right; width: 36%; }
+.inVoiceWrap table.meta:after, .inVoiceWrap table.balance:after { clear: both; content: ""; display: table; }
+
+.inVoiceWrap table.meta th { width: 40%; }
+.inVoiceWrap table.meta td { width: 60%; }
+
+.inVoiceWrap table.inventory { clear: both; width: 100%; }
+.inVoiceWrap table.inventory th { font-weight: bold; text-align: center; }
+
+.inVoiceWrap table.inventory td:nth-child(1) { width: 26%; }
+.inVoiceWrap table.inventory td:nth-child(2) { width: 38%; }
+.inVoiceWrap table.inventory td:nth-child(3) { text-align: right; width: 12%; }
+.inVoiceWrap table.inventory td:nth-child(4) { text-align: right; width: 12%; }
+.inVoiceWrap table.inventory td:nth-child(5) { text-align: right; width: 12%; }
+
+/* table balance */
+
+.inVoiceWrap table.balance th, .inVoiceWrap table.balance td { width: 50%; }
+.inVoiceWrap table.balance td { text-align: right; }
+
+/* aside */
+
+.inVoiceWrap aside h1 { border: none; border-width: 0 0 1px; margin: 0 0 1em; }
+.inVoiceWrap aside h1 { border-color: #999; border-bottom-style: solid; }
+
+/* javascript */
+
+.inVoiceWrap .add, .inVoiceWrap .cut
+{
+	border-width: 1px;
+	display: block;
+	font-size: .8rem;
+	padding: 0.25em 0.5em;	
+	float: left;
+	text-align: center;
+	width: 0.6em;
+}
+
+.inVoiceWrap .add, .inVoiceWrap .cut
+{
+	background: #9AF;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	background-image: -moz-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	background-image: -webkit-linear-gradient(#00ADEE 5%, #0078A5 100%);
+	border-radius: 0.5em;
+	border-color: #0076A3;
+	color: #FFF;
+	cursor: pointer;
+	font-weight: bold;
+	text-shadow: 0 -1px 2px rgba(0,0,0,0.333);
+}
+
+.inVoiceWrap .add { margin: -2.5em 0 0; }
+
+.inVoiceWrap .add:hover { background: #00ADEE; }
+
+.inVoiceWrap .cut { opacity: 0; position: absolute; top: 0; left: -1.5em; }
+.inVoiceWrap .cut { -webkit-transition: opacity 100ms ease-in; }
+
+.inVoiceWrap tr:hover .cut { opacity: 1; }
+
+// @media print {
+// 	* { -webkit-print-color-adjust: exact; }
+// 	html { background: none; padding: 0; }
+// 	body { box-shadow: none; margin: 0; }
+// 	span:empty { display: none; }
+// 	.add, .cut { display: none; }
+// }
+
 // dashboard header and sidebar design 
 
 .dashMenuItem{
@@ -51,24 +169,29 @@ a{
     bottom: 0;
 }
 
+#sidebar-menu{
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
-.sidebarWrap::-webkit-scrollbar-track
+#sidebar-menu::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
+	background-color: transparent;
 	border-radius: 10px;
 }
 
-.sidebarWrap::-webkit-scrollbar
+#sidebar-menu::-webkit-scrollbar
 {
-	width: 10px;
-	background-color: #F5F5F5;
+	width: 5px;
+	background-color: transparent;
 }
 
-.sidebarWrap::-webkit-scrollbar-thumb
+#sidebar-menu::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(35, 49, 76)), color-stop(0.72, rgba(73, 125, 189, 0.394)), color-stop(0.86, rgb(42, 45, 53)));
 }
 
 .listWrap{
@@ -254,6 +377,15 @@ th, td{
 .tableItemWid {
     width: 970px !important;
     overflow: auto;
+}
+
+.tableItemWidTwoo {
+    width: 1015px !important;
+    overflow: auto;
+}
+
+.ratingStar{
+    color: #fdd300;
 }
 
 .orderCardScroll{
@@ -516,7 +648,7 @@ label.d-flex::after {
 }
 
 .productWrapper{
-    width: 300px;
+    width: 300px !important;
 }
 
 .productImage{
@@ -679,6 +811,30 @@ label.d-flex::after {
 {
 	border-radius: 10px;
 	background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(122,153,217)), color-stop(0.72, rgb(73,125,189)), color-stop(0.86, rgb(28,58,148)));
+}
+
+// Transactions design
+
+.detailstext {
+    min-height: 39px !important;
+    height: 39px !important;
+    overflow: hidden;
+}
+
+.productWrapper2{
+    width: 225px !important;
+}
+
+.productImage{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.productText{
+    margin-left: 10px;
+    font-size: 15px;
+    color: $body-color;
 }
 
 
