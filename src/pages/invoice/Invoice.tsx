@@ -1,18 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 
 const Invoice: React.FC = () => {
 
-    const handlePrint = () => {
-        const printContents = document.getElementById("invoicePrintable").innerHTML;
-        const originalContents = document.body.innerHTML;
-   
-        document.body.innerHTML = printContents;
-   
-        window.print();
-   
-        document.body.innerHTML = originalContents;
-    };
+    useEffect(() => {
+        const print = document.querySelector('.printBtn');
+        const media = window.matchMedia('print');
+
+        const update = (e: MediaQueryListEvent) => {
+            if (print instanceof HTMLElement) {
+                print.style.display = e.matches ? 'none' : 'block';
+            }
+        };
+
+        const convert = () => {
+            media.addEventListener('change', update, false);
+            window.print();
+        };
+
+        if (print instanceof HTMLElement) {
+            print.addEventListener('click', convert, false);
+        }
+
+        return () => {
+            if (print instanceof HTMLElement) {
+                print.removeEventListener('click', convert, false);
+            }
+            media.removeEventListener('change', update, false);
+        };
+    }, []);
 
     return (
         <>
@@ -24,7 +40,7 @@ const Invoice: React.FC = () => {
                     <div className="col d-flex align-items-center justify-content-between">
                         <h6 className="subtitle">Home - Invoices - Invoice</h6>
 
-                        <button onClick={handlePrint} className="btn btn-danger btn-sm">Print</button>
+                        <button className="btn btn-danger btn-sm printBtn">Print</button>
                     </div>
                 </div>
 
@@ -44,9 +60,9 @@ const Invoice: React.FC = () => {
                         </header>
 
                         <article>
-                            <h1>Recipient</h1>
+                            {/* <h1>Recipient</h1> */}
                             <address contentEditable>
-                                <p>Some Company<br/>c/o Some Guy</p>
+                                <figcaption style={{fontSize:"14px"}} className="blockquote-footer">Address: Krishnapur, Chachuri Purulia, <br/> Kalia, Narail, Khulna, Bangladesh</figcaption>
                             </address>
                             <table className="meta">
                                 <tr>

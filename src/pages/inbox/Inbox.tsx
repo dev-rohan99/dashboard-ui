@@ -22,7 +22,7 @@ const Inbox: React.FC = () => {
 
                 <div className="row mb-5 rounded shadow-lg overflow-hidden">
 
-                    <div className="col-md-3 py-3 inboxSidebarWrap">
+                    <div className="col-md-4 py-3 inboxSidebarWrap">
                         <ul className="p-0 m-0 list-unstyled">
 
                             <li className="mb-2">
@@ -52,7 +52,7 @@ const Inbox: React.FC = () => {
                         </ul>
                     </div>
 
-                    <div className="col-md-9 p-3 position-relative">
+                    <div className="col-md-8 p-3 position-relative inboxMessageWrap">
 
                         <div className="messagesWrap">
                             <div className="d-flex justify-content-start align-items-start mb-3 mt-2">
