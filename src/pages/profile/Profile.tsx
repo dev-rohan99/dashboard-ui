@@ -26,7 +26,7 @@ const Profile: React.FC = () => {
 
                     <div className="col d-flex flex-column">
                         <h2>Rohan Mostofa Abir</h2>
-                        <span>devrohan599@gmail.com</span>
+                        <span>example@gmail.com</span>
                         <span>Address: <span>Krishnapur, Chachuri Purulia, Kalia</span>,<br/>
                         <span> Narail, Khulna, Bangladesh</span></span>
                         <div className="mt-3 pt-3 d-flex justify-content-start align-items-center break gap-5">
